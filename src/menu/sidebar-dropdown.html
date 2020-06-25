@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        html, body {
+            margin: 0;
+        }
+
+        div.sidebar {
+            position: fixed;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 280px;
+            background-color: black;
+        }
+
+        div.sidebar > div {
+            line-height: 50px;
+            padding-left: 40px;
+            text-align: left;
+            color: #777777;
+            cursor: pointer;
+            font-size: 17px;
+        }
+
+        div.sidebar > div:hover {
+            color: white;
+        }
+
+        div.content {
+            margin-left: 300px;
+            padding-left: 20px;
+        }
+    </style>
+</head>
+<body>
+<div class="sidebar">
+    <div>About</div>
+    <div>Services</div>
+    <div>Clients</div>
+    <div>Contract</div>
+    <div>Dropdown</div>
+    <div>Search</div>
+</div>
+<div class="content">
+    <h1>Sidebar Dropdown</h1>
+    <p>Click on the dropdown button to open the dropdown menu inside the side navigation.</p>
+
+    <p>This sidebar is of full height (100%) and always shown.</p>
+
+    <p>Some random text..</p>
+</div>
+</body>
+</html>

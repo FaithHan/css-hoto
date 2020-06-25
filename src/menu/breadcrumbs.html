@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        ul {
+            list-style: none;
+            padding: 0;
+            overflow: hidden;
+        }
+
+        ul > li {
+            display: inline;
+            font-size: 20px;
+            padding: 5px;
+        }
+
+        ul > li > a {
+            text-decoration: none;
+            color: dodgerblue;
+        }
+
+        ul > li:not(:first-child)::before {
+            content: '/';
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+<ul class="breadcrumb">
+    <li><a href="#">Home</a></li>
+    <li><a href="#">Pictures</a></li>
+    <li><a href="#">Summer 15</a></li>
+    <li>Italy</li>
+</ul>
+</body>
+</html>

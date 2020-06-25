@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div.container {
+            position: relative;
+            width: 1000px;
+            margin: auto;
+        }
+
+        div.container img {
+            opacity: 0.7;
+        }
+
+        div.container > div {
+            font-size: 20px;
+        }
+
+        div.img1 {
+            position: absolute;
+            left: 10px;
+            top: 10px;
+        }
+
+        div.img2 {
+            position: absolute;
+            right: 10px;
+            top: 10px;
+        }
+
+        div.img3 {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        div.img4 {
+            position: absolute;
+            left: 10px;
+            bottom: 10px;
+        }
+
+        div.img5 {
+            position: absolute;
+            right: 10px;
+            bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <img src="../../img/img_woods_wide.jpg"/>
+    <div class="img1">Top left</div>
+    <div class="img2">Top Right</div>
+    <div class="img3">Center</div>
+    <div class="img4">Bottom left</div>
+    <div class="img5">Bottom Right</div>
+</div>
+</body>
+</html>

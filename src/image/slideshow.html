@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+
+        .fade {
+            animation: fade 2s forwards;
+        }
+
+        @keyframes fade {
+            from {
+                opacity: 0.1;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        div.container {
+            width: 1000px;
+            margin: auto;
+            border: 1px solid;
+            position: relative;
+        }
+
+        div.select {
+            display: flex;
+            justify-content: center;
+        }
+
+        div.select div.circle {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            background-color: gainsboro;
+            margin: 30px 15px;
+            cursor: pointer;
+        }
+
+        div.select div.circle.active {
+            background-color: grey;
+        }
+
+        .mySlides {
+            height: 350px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .mySlides > div.numbertext {
+            position: absolute;
+            left: 20px;
+            top: 20px;
+            color: white;
+            font-size: 18px;
+        }
+
+        .mySlides > div.text {
+            color: white;
+            position: absolute;
+            right: 20px;
+            bottom: 20px;
+            font-size: 18px;
+        }
+
+        .mySlides {
+            display: none;
+        }
+
+        a {
+            position: absolute;
+            top: 50%;
+            padding: 30px;
+            color: white;
+            font-size: 20px;
+            background-color: rgba(0, 0, 0, 0);
+            cursor: pointer;
+            transform: translate(0, -65%);
+            transition: background-color .3s;
+        }
+
+        a:hover {
+            background-color: rgba(0, 0, 0, 1);
+        }
+
+        a.prev {
+            left: 0;
+        }
+
+        a.next {
+            right: 0;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="image-box">
+        <div class="mySlides fade" style="display: block">
+            <div class="numbertext">1 / 3</div>
+            <img src="../../img/img_5terre_wide.jpg" style="width: 100%"/>
+            <div class="text">Caption Text</div>
+        </div>
+        <div class="mySlides fade">
+            <div class="numbertext">2 / 3</div>
+            <img src="../../img/img_nature_wide.jpg" style="width: 100%"/>
+            <div class="text">Caption Text</div>
+        </div>
+        <div class="mySlides fade">
+            <div class="numbertext">3 / 3</div>
+            <img src="../../img/img_nature.jpg" style="width: 100%"/>
+            <div class="text">Caption Text</div>
+        </div>
+    </div>
+    <div class="select">
+        <div class="circle" onclick="selectImage(0)"></div>
+        <div class="circle" onclick="selectImage(1)"></div>
+        <div class="circle" onclick="selectImage(2)"></div>
+    </div>
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+</div>
+<script>
+    var index = 0;
+
+    function plusSlides(offset) {
+        index = (Math.max(0, index + offset)) % 3;
+        selectImage(index);
+    }
+
+    function selectImage(index) {
+        document.querySelectorAll('.fade').forEach(element => {
+            element.style.display = 'none';
+        })
+        document.querySelectorAll('.fade')[index].style.display = 'block';
+
+        document.querySelectorAll('.circle').forEach(element => {
+            element.classList.remove('active');
+        })
+        document.querySelectorAll('.circle')[index].classList.add('active');
+    }
+
+    selectImage(0);
+    setInterval(plusSlides, 3000, 1)
+
+</script>
+</body>
+</html>

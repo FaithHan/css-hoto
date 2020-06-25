@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div.btn-group {
+            display: flex;
+            width: 300px;
+            border: 1px solid black;
+        }
+
+        div.btn-group > button {
+            flex: 1;
+            background-color: green;
+            color: white;
+            padding: 20px;
+            outline: none;
+            border: none;
+            cursor: pointer;
+        }
+
+        div.btn-group > button:hover {
+            background-color: red;
+        }
+
+        div.btn-group > button:not(:first-child) {
+            border-left: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+<div class="btn-group">
+    <button>Apple</button>
+    <button>Samsung</button>
+    <button>Sony</button>
+</div>
+</body>
+</html>

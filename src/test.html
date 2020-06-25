@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        html, body {
+            margin: 0;
+            height: 1000px;
+        }
+
+        div.modal {
+            position: fixed;
+            left: 50%;
+            top: 50%;
+            width: 350px;
+            height: 470px;
+            box-sizing: border-box;
+            padding: 10px;
+            background: grey;
+            animation: show-modal 0.5s;
+            transform: translate(-50%, -50%);
+        }
+
+        .hide {
+            display: none;
+        }
+
+        @keyframes show-modal {
+            from {
+                top: -300px;
+            }
+            to {
+                top: 50%;
+            }
+        }
+    </style>
+</head>
+<body>
+<button>modal</button>
+<div class="modal hide">
+    <h1>你好</h1>
+</div>
+</body>
+<script>
+    document.querySelector('button').addEventListener('click', function (event) {
+        document.getElementsByClassName('modal')[0].classList.toggle('hide');
+    })
+</script>
+</html>

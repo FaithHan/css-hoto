@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div.tabs {
+            background: #f1f1f1;
+            font-size: 17px;
+            font-weight: bold;
+            overflow: hidden;
+            text-align: center;
+            border: 1px solid lightgray;
+        }
+
+        div.tabs div {
+            float: left;
+            line-height: 50px;
+            width: 80px;
+            cursor: pointer;
+        }
+
+        div.tabs div:hover {
+            background: rgba(128, 128, 128, 0.52);
+
+        }
+
+        div.tabs div.active {
+            background: grey;
+        }
+
+        div.content {
+            border: 1px solid lightgray;
+            border-top: 1px solid transparent;
+            padding: 10px;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+<div class="tabs">
+    <div onclick="openCity(event, 'London')">London</div>
+    <div onclick="openCity(event, 'Paris')">Pairs</div>
+    <div onclick="openCity(event, 'Tokyo')">Tokyo</div>
+</div>
+<div id='London' class="content">
+    <h1>London</h1>
+    <p>London is the capital city of England.</p>
+</div>
+<div id='Paris' class="content">
+    <h1>Paris</h1>
+    <p>Paris is the capital of France.</p>
+</div>
+<div id='Tokyo' class="content">
+    <h1>Tokyo</h1>
+    <p>Tokyo is the capital city of England.</p>
+</div>
+<script>
+    function openCity(evt, cityName) {
+        // Declare all variables
+        var i, tabcontent, tablinks;
+
+        // Get all elements with class="tabcontent" and hide them
+        tabcontent = document.getElementsByClassName("content");
+        for (i = 0; i < tabcontent.length; i++) {
+            tabcontent[i].style.display = "none";
+        }
+
+        // Get all elements with class="tablinks" and remove the class "active"
+        tablinks = document.querySelectorAll("div.tabs div");
+        for (i = 0; i < tablinks.length; i++) {
+            tablinks[i].className = tablinks[i].className.replace(" active", "");
+        }
+
+        // Show the current tab, and add an "active" class to the button that opened the tab
+        document.getElementById(cityName).style.display = "block";
+        evt.currentTarget.className += " active";
+    }
+    // default tab select
+    document.querySelectorAll('div.tabs div')[1].click();
+</script>
+</body>
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div.modal {
+            position: fixed;
+            display: none;
+            background-color: rgba(0, 0, 0, 0.8);
+            top: 0;
+            bottom: 0;
+            padding-top: 100px;
+            left: 0;
+            right: 0;
+        }
+
+        span.close {
+            position: absolute;
+            right: 50px;
+            top: 50px;
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 40px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        span.close:hover {
+            color: rgba(255, 255, 255, 1);
+        }
+
+
+        div.modal > div.img {
+            width: 600px;
+            margin: auto;
+        }
+
+        #myImg {
+            cursor: pointer;
+            transition: opacity .4s;
+        }
+
+
+        #myImg:hover {
+            opacity: 0.8;
+        }
+
+        #caption {
+            width: 100px;
+            margin: auto;
+            text-align: center;
+            padding-top: 30px;
+            color: white;
+            font-size: 20px;
+        }
+
+        div.img, #caption {
+            animation: fade .7s;
+        }
+
+        @keyframes fade {
+            from {
+                transform: scale(0);
+            }
+            to {
+                transform: scale(1);
+            }
+        }
+    </style>
+</head>
+<body>
+<h1>Image Modal</h1>
+<p>In this example, we use CSS to create a modal (dialog box) that is hidden by default.</p>
+
+<p>We use JavaScript to trigger the modal and to display the current image inside the modal when it is clicked on. Also
+    note that we use the value from the image's "alt" attribute as an image caption text inside the modal.</p>
+<img id="myImg" src="../../img/img_nature.jpg" alt="Snow" style="width:100%;max-width:300px">
+<div class="modal">
+    <span class="close">&times;</span>
+    <div class="img">
+        <img id="myImg1" src="../../img/img_nature.jpg" alt="Snow" style="width:100%;max-width:700px">
+    </div>
+    <div id="caption">Snow</div>
+</div>
+<script>
+    const modal = document.getElementsByClassName('modal')[0];
+    document.getElementsByClassName('close')[0].addEventListener('click', function () {
+        modal.style.display = 'none';
+    })
+    document.getElementById('myImg').addEventListener('click', function () {
+        modal.style.display = 'block';
+    })
+</script>
+</body>
+</html>

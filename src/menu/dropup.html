@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body {
+            margin-top: 300px;
+        }
+
+        div.dropup {
+            position: relative;
+        }
+
+        button.dropbtn {
+            background-color: #4CAF50;
+            outline: none;
+            border: none;
+            color: white;
+            padding: 15px 20px;
+            cursor: pointer;
+        }
+
+        button.dropbtn:hover {
+            background-color: seagreen;
+        }
+
+        div.dropup-content {
+            position: absolute;
+            width: 150px;
+            left: 0;
+            bottom: 50px;
+            text-align: center;
+            cursor: pointer;
+            display: none;
+        }
+
+        div.dropup-content > a {
+            display: block;
+            background-color: gainsboro;
+            line-height: 40px;
+            text-decoration: none;
+            color: black;
+        }
+
+        div.dropup-content > a:hover {
+            background-color: #777777;
+        }
+
+        .dropup:hover .dropup-content {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+<h1>北京</h1>
+<div class="dropup">
+    <button class="dropbtn">Dropup</button>
+    <div class="dropup-content">
+        <a href="#">Link 1</a>
+        <a href="#">Link 2</a>
+        <a href="#">Link 3</a>
+    </div>
+</div>
+</body>
+</html>

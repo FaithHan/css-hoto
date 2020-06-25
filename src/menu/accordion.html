@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        button.accordion {
+            width: 100%;
+            padding: 20px;
+            border: none;
+            background: lightgray;
+            display: block;
+            outline: none;
+            cursor: pointer;
+            transition: 0.4s;
+            text-align: left;
+            font-size: 15px;
+        }
+
+        .accordion:after {
+            content: '\02795'; /* Unicode character for "plus" sign (+) */
+            font-size: 13px;
+            color: #777;
+            float: right;
+            margin-left: 5px;
+        }
+
+        .show:after {
+            content: "\2796"; /* Unicode character for "minus" sign (-) */
+        }
+
+
+        button.accordion:hover {
+            background: rgba(128, 128, 128, 0.85);
+        }
+
+        div.panel {
+            width: 100%;
+            text-align: left;
+            font-size: 15px;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.5s ease-out;
+        }
+    </style>
+</head>
+<body>
+<button class="accordion">Section 1</button>
+<div class="panel">
+    <p>Lorem ipsum...</p>
+</div>
+
+<button class="accordion">Section 2</button>
+<div class="panel">
+    <p>Lorem ipsum...</p>
+</div>
+
+<button class="accordion">Section 3</button>
+<div class="panel">
+    <p>Lorem ipsum...</p>
+</div>
+</body>
+<script>
+    [...document.querySelectorAll('button.accordion')].forEach(element => element.addEventListener('click', function (event) {
+            event.target.classList.toggle('show');
+            const element1 = event.target.nextElementSibling;
+            if (element1.style.maxHeight) {
+                element1.style.maxHeight = null;
+            } else {
+                element1.style.maxHeight = element1.scrollHeight + 'px';
+            }
+        }
+    ))
+</script>
+</html>

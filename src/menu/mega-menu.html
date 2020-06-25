@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        html, body {
+            margin: 0;
+        }
+
+        div.nav {
+            display: flex;
+            background-color: black;
+        }
+
+        div.nav > div > a {
+            display: block;
+            padding: 20px;
+            text-align: center;
+            color: white;
+            text-decoration: none;
+        }
+
+        div.nav > div > a:hover {
+            background-color: red;
+        }
+
+        .dropdown-content {
+            position: absolute;
+            background-color: #888888;
+            left: 0;
+            width: 100%;
+            display: none;
+        }
+
+        .dropdown-content .title h1 {
+            background-color: red;
+            margin: 0;
+            padding: 30px 60px;
+        }
+
+        .article {
+            display: flex;
+        }
+
+        .article > div {
+            flex: 1;
+            padding-left: 30px;
+        }
+
+        .article > div a {
+            display: block;
+            color: black;
+            padding-left: 30px;
+            line-height: 50px;
+            text-decoration: none;
+        }
+
+        .article > div a:hover {
+            background-color: #dddddd;
+        }
+
+        div.nav > div:nth-child(3):hover .dropdown-content {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+<div class="nav">
+    <div><a href="">Home</a></div>
+    <div><a href="">News</a></div>
+    <div>
+        <a>Dropdown</a>
+        <div class="dropdown-content">
+            <div class="title"><h1>Mega Menu</h1></div>
+            <div class="article">
+                <div>
+                    <div><h1>Category 1</h1></div>
+                    <div><a href="#">Link1</a></div>
+                    <div><a href="#">Link2</a></div>
+                    <div><a href="#">Link3</a></div>
+                </div>
+                <div>
+                    <div><h1>Category 2</h1></div>
+                    <div><a href="#">Link1</a></div>
+                    <div><a href="#">Link2</a></div>
+                    <div><a href="#">Link3</a></div>
+                </div>
+                <div>
+                    <div><h1>Category 3</h1></div>
+                    <div><a href="#">Link1</a></div>
+                    <div><a href="#">Link2</a></div>
+                    <div><a href="#">Link3</a></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div>
+    <h4>Responsive Mega Menu (Full-width dropdown in navbar)</h4>
+    <p>Hover over the "Dropdown" link to see the mega menu.</p>
+    <p>Resize the browser window to see the responsive effect.</p>
+</div>
+</body>
+</html>

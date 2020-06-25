@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        html, body {
+            margin: 0;
+        }
+
+        div.navbar {
+            display: flex;
+            text-align: center;
+            background-color: #000000;
+            color: white;
+        }
+
+        a {
+            display: block;
+            color: white;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        div.navbar > div {
+            width: 100px;
+            line-height: 50px;
+        }
+
+        div.navbar > div:hover {
+            background-color: red;
+        }
+        .dropdown {
+            position: relative;
+        }
+
+        .navbar .dropbtn {
+            background-color: #000000;
+            color: white;
+            outline: none;
+            border: none;
+        }
+
+        .dropdown-content {
+            position: absolute;
+            background-color: darkgray;
+            left: 0;
+            right: 0;
+            display: none;
+        }
+
+        .dropdown:hover div.dropdown-content {
+            display: block;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #888888;
+        }
+    </style>
+</head>
+<body>
+<div class="navbar">
+    <div><a href="#">Home</a></div>
+    <div><a href="#">News</a></div>
+    <div class="dropdown">
+        <a class="dropbtn">Dropdown
+            <i class="fa fa-caret-down"></i>
+        </a>
+        <div class="dropdown-content">
+            <a href="#">Link 1</a>
+            <a href="#">Link 2</a>
+            <a href="#">Link 3</a>
+        </div>
+    </div>
+</div>
+</body>
+</html>
