@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div.container {
+            color: white;
+            font-size: 18px;
+            display: flex;
+            line-height: 50px;
+            width: 100px;
+            text-align: center;
+        }
+
+        button.btn {
+            background: dodgerblue;
+            color: white;
+            border: none;
+            flex: 3;
+        }
+
+        div.sub-btn {
+            background: dodgerblue;
+            flex: 1.5;
+        }
+
+        button.btn:hover, div.sub-btn:hover {
+            background: blue;
+        }
+
+        ul {
+            display: none;
+            position: absolute;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        ul li a {
+            display: block;
+            text-decoration: none;
+            background: #dddddd;
+            color: black;
+            padding: 10px 20px;
+        }
+
+        ul li a:hover {
+            background: #777777;
+        }
+
+        div.container div.sub-btn:hover ul {
+            display: block;
+        }
+
+    </style>
+</head>
+<body>
+<div class="container">
+    <button class="btn">Button</button>
+    <div class="sub-btn">
+        <span>V</span>
+        <ul>
+            <li><a href="">Link1</a></li>
+            <li><a href="">Link2</a></li>
+            <li><a href="">Link3</a></li>
+        </ul>
+    </div>
+
+</div>
+</body>
+</html>

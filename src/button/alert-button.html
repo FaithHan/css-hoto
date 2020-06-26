@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        button {
+            display: block;
+            padding: 15px 0;
+            width: 150px;
+            text-align: center;
+            margin: 20px;
+            font-size: 16px;
+            float: left;
+            border: none;
+            color: #ffffff;
+            background: lightseagreen;
+            cursor: pointer;
+            /*outline: none;*/
+            transition: background-color 0.4s;
+        }
+
+        button.success {
+            background: #4CAF50;
+        }
+
+        button.info {
+            background: #2196F3;
+        }
+
+        button.warning {
+            background: #ff9800;
+        }
+
+        button.danger {
+            background: #f44336;
+        }
+
+        button.default {
+            background: #e7e7e7;
+            color: black;
+        }
+
+        button:hover {
+            background: #4CAF50;
+        }
+    </style>
+</head>
+<body>
+<button class="success">Success</button>
+<button class="info">Info</button>
+<button class="warning">Warning</button>
+<button class="danger">Danger</button>
+<button class="default">Default</button>
+</body>
+</html>

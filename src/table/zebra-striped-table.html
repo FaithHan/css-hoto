@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            border: 1px solid gainsboro;
+            width: 100%;
+
+        }
+        td, th {
+            height: 50px;
+            font-size: 18px;
+            text-align: left;
+            padding-left: 30px;
+        }
+        tr:not(:first-child):nth-child(even) {
+            background: lightgray;
+        }
+    </style>
+</head>
+<body>
+<h1>Zebra Striped Table</h1>
+<p>For zebra-striped tables, use the nth-child() selector and add a background-color to all even (or odd) table rows:</p>
+<table>
+    <tr>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Points</th>
+    </tr>
+    <tr>
+        <td>Jill</td>
+        <td>Smith</td>
+        <td>50</td>
+    </tr>
+    <tr>
+        <td>Eve</td>
+        <td>Jackson</td>
+        <td>94</td>
+    </tr>
+    <tr>
+        <td>Adam</td>
+        <td>Johnson</td>
+        <td>67</td>
+    </tr>
+</table>
+</body>
+</html>

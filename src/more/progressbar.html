@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .container {
+            height: 40px;
+            width: 95%;
+            background-color: #dddddd;
+        }
+
+        .box {
+            height: 100%;
+            width: 2%;
+            box-sizing: border-box;
+            background-color: #4CAF50;
+            text-align: right;
+            line-height: 40px;
+            padding-right: 20px;
+            color: white;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="box">
+        <span id="hehe">111</span>
+    </div>
+</div>
+
+<button onclick="f()">run</button>
+<script>
+    function f() {
+        let box = document.getElementsByClassName('box')[0];
+        let hehe = document.getElementById('hehe');
+        box.style.width = '0px';
+        let percentage = 0;
+        const timer = setInterval(function () {
+            let number = ++percentage;
+            box.style.width = `${number}%`;
+            hehe.innerText = `${number}%`;
+            if (number === 100) {
+                clearInterval(timer);
+            }
+        }, 300)
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div.container {
+            display: flex;
+            height: 40px;
+            margin: 20px;
+        }
+        div.icon {
+            flex-basis: 40px;
+            background: dodgerblue;
+        }
+        input {
+            flex: 1;
+            border: 2px solid darkgrey;
+        }
+
+        button {
+            width: 100%;
+            background: dodgerblue;
+            color: white;
+            border: none;
+            padding: 15px 0;
+            font-size: 17px;
+        }
+    </style>
+</head>
+<body>
+<h1>Register</h1>
+<div class="container">
+    <div class="icon"></div>
+    <input type="text" name="username" placeholder="Username">
+</div>
+<div class="container">
+    <div class="icon"></div>
+    <input type="text" name="email" placeholder="Email">
+</div>
+<div class="container">
+    <div class="icon"></div>
+    <input type="text" name="password" placeholder="Password">
+</div>
+<button>Register</button>
+</body>
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        h1, p {
+            margin: 0;
+            padding: 0;
+        }
+
+        .hide {
+            display: none;
+        }
+
+        div.modal {
+            position: fixed;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.4);
+            font-family: Arial, serif;
+        }
+
+        div.container {
+            position: relative;
+            width: 1000px;
+            margin: auto;
+            margin-top: 100px;
+            background-color: white;
+            animation: fadeIn .4s;
+        }
+
+        @keyframes fadeIn {
+            from {
+                margin-top: -200px;
+            }
+
+            to {
+                margin-top: 100px;
+            }
+        }
+
+        .content p {
+            padding: 10px 20px;
+            font-size: 17px;
+        }
+
+        .header, .footer {
+            background-color: red;
+            padding: 20px;
+            color: white;
+        }
+
+        .footer {
+            font-size: 20px;
+        }
+        span {
+            position: absolute;
+            right: 20px;
+            top: 20px;
+            font-size: 30px;
+            cursor: pointer;
+        }
+        span:hover {
+            color: black;
+        }
+    </style>
+</head>
+<body>
+<button id="btn">Open Modal</button>
+<div class="modal hide">
+    <div class="container">
+        <div class="header">
+            <h1>Modal Header</h1>
+            <span id="span">&times;</span>
+        </div>
+        <div class="content">
+            <p>Hello World!</p>
+            <p>Modals are awesome!</p>
+        </div>
+        <div class="footer">Modal Footer</div>
+    </div>
+
+</div>
+<script>
+    document.getElementById('btn').addEventListener('click', function () {
+        document.getElementsByClassName('modal')[0].classList.remove('hide');
+    })
+
+    document.getElementById('span').addEventListener('click', function () {
+        document.getElementsByClassName('modal')[0].classList.add('hide');
+    })
+</script>
+</body>
+</html>
