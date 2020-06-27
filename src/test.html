@@ -1,50 +1,40 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
     <style>
-        html, body {
-            margin: 0;
-            height: 1000px;
+        html {
+            /*overflow: hidden;*/
+            height: 2000px;
+        }
+        .container {
+            border: 1px solid;
+            width: 500px;
+            height: 300px;
+            overflow: auto;
+            background-color: red;
+            padding: 20px;
         }
 
-        div.modal {
-            position: fixed;
-            left: 50%;
-            top: 50%;
-            width: 350px;
-            height: 470px;
-            box-sizing: border-box;
-            padding: 10px;
-            background: grey;
-            animation: show-modal 0.5s;
-            transform: translate(-50%, -50%);
-        }
-
-        .hide {
-            display: none;
-        }
-
-        @keyframes show-modal {
-            from {
-                top: -300px;
-            }
-            to {
-                top: 50%;
-            }
+        .content {
+            height: 600px;
+            margin: 20px;
+            background-color: blue;
         }
     </style>
 </head>
 <body>
-<button>modal</button>
-<div class="modal hide">
-    <h1>你好</h1>
+<div class="container" id="hehe">
+    <div class="content">1</div>
 </div>
-</body>
+<hr>
 <script>
-    document.querySelector('button').addEventListener('click', function (event) {
-        document.getElementsByClassName('modal')[0].classList.toggle('hide');
-    })
+    let hehe = document.getElementById('hehe');
+    let boundingClientRect = hehe.getBoundingClientRect();
 </script>
+</body>
 </html>
